@@ -1,0 +1,46 @@
+---
+date: "2022-01-17T00:00:00Z"
+external_link: ""
+image:
+  caption: Photo by derek oyen on Unsplash
+  focal_point: Smart
+links:
+- icon: github
+  icon_pack: fab
+  name: github material
+  url: https://allisonhorst.github.io/palmerpenguins/
+#slides: example
+summary: 
+tags:
+- Deep Learning
+title: Palmer Penguins on ggplot
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+**The Palmer Penguins**
+The data in the palmerpenguins package in R include size measurements, clutch observations, and blood isotope ratios for adult foraging Adelie, Chinstrap, and Gentoo penguins observed on islands in the Palmer Archipelago near Palmer Station, Antarctica8. The data were collected and made available by Dr. Kristen Gorman and the Palmer Station Long Term Ecological Research (LTER) Program.This post is to demostrate how you can plot **a ggplot** from the dataset penguins. 
+# Package Loading
+```{r}
+#install.packages("palmerpenguins") # installing the package
+library(palmerpenguins)#loading package 
+library(ggplot2)# loading package
+# let us have a look at the summary of the dataset 
+summary(penguins)
+```
+
+# Head 
+```{r}
+head(penguins)
+```
+
+
+Create the plot of our interest as follows
+
+```{r}
+ggplot(penguins, aes(bill_length_mm,bill_depth_mm, color=species))+
+  geom_point()
+```
+
