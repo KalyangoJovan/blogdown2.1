@@ -10,12 +10,9 @@ main:
   - name: Blogs
     url: '#Blogs'
     weight: 20
-  - name: Projects
-    url: '#projects'
-    weight: 30
   - name: Skills
     url: '#Skills'
-    weight: 40
+    weight: 30
   - name: Contact
     url: '#contact'
-    weight: 50
+    weight: 40
